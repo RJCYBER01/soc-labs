@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Log Analysis Lab | SOC Labs</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f7f9fc;
+      color: #333;
+    }
+
+    header {
+      background: #0a0f24;
+      padding: 20px;
+      text-align: center;
+      color: white;
+    }
+
+    nav a {
+      color: #61dafb;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #0a0f24;
+      margin-bottom: 20px;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      background: #0a0f24;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: #61dafb;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Log Analysis Lab</h1>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/alert-triage">Alert Triage</a>
+      <a href="/threat-hunting">Threat Hunting</a>
+    </nav>
+  </header>
+
+  <section>
+    <h2>Overview</h2>
+    <div class="card">
+      <p>This lab focuses on analyzing security logs to identify suspicious activity, correlate events, and determine whether an incident requires escalation.</p>
+      <p>Tools used: SIEM (Splunk / ELK), Sysmon, Windows Event Logs, Linux auth logs.</p>
+    </div>
+
+    <h2>Scenario</h2>
+    <div class="card">
+      <p>A workstation triggered multiple failed login attempts followed by a successful login from an unusual IP address. Your task is to investigate the logs and determine whether this is brute-force activity or legitimate user behavior.</p>
+    </div>
+
+    <h2>Investigation Steps</h2>
+    <div class="card">
+      <ul>
+        <li>Reviewed Windows Event ID 4625 (failed logon attempts).</li>
+        <li>Correlated timestamps with Event ID 4624 (successful logon).</li>
+        <li>Checked source IP and geolocation for anomalies.</li>
+        <li>Analyzed Sysmon Event ID 3 (network connections) for unusual outbound traffic.</li>
+        <li>Reviewed user activity logs for privilege escalation attempts.</li>
+      </ul>
+    </div>
+
+    <h2>Findings</h2>
+    <div class="card">
+      <p>The pattern of repeated failed logins followed by a successful login from a foreign IP suggests a possible brute-force attack. No privilege escalation was detected, but lateral movement attempts were observed.</p>
+    </div>
+
+    <h2>Conclusion</h2>
+    <div class="card">
+      <p>This activity should be escalated to Tier 2 for deeper investigation. Recommended actions include resetting the user’s password, blocking the suspicious IP, and reviewing additional logs for lateral movement.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Ravicyberops | <a href="https://github.com/RJCYBER01/soc-labs">GitHub</a></p>
+  </footer>
+
+</body>
+</html>
