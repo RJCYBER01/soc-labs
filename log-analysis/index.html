@@ -1,115 +1,12 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Log Analysis Lab | SOC Labs</title>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="SOC log-analysis investigations by Ravi Puri.">
+  <title>Log Analysis | Ravi Cyber Ops</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f7f9fc;
-      color: #333;
-    }
-
-    header {
-      background: #0a0f24;
-      padding: 20px;
-      text-align: center;
-      color: white;
-    }
-
-    nav a {
-      color: #61dafb;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    section {
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    h2 {
-      color: #0a0f24;
-      margin-bottom: 20px;
-    }
-
-    .card {
-      background: #fff;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      padding: 20px;
-      margin-bottom: 20px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-
-    footer {
-      background: #0a0f24;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      margin-top: 40px;
-    }
-
-    footer a {
-      color: #61dafb;
-      text-decoration: none;
-    }
+    :root{--bg:#07111f;--panel:#0d1b2d;--text:#eef6ff;--muted:#9cb0c6;--line:#203750;--accent:#55e6c1}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 Inter,system-ui,sans-serif}.wrap{width:min(calc(100% - 36px),980px);margin:auto}header{border-bottom:1px solid var(--line)}nav{min-height:70px;display:flex;align-items:center;justify-content:space-between}a{color:var(--accent)}nav a{text-decoration:none;font-weight:800}.back{color:var(--muted);font-size:14px}main{padding:70px 0 90px}.eyebrow{color:var(--accent);font:700 12px ui-monospace,monospace;letter-spacing:.12em;text-transform:uppercase}h1{max-width:760px;margin:15px 0;font-size:clamp(40px,7vw,68px);line-height:1.04;letter-spacing:-.045em}.lead{max-width:700px;color:var(--muted);font-size:19px}.card{margin-top:34px;padding:32px;border:1px solid var(--line);border-radius:15px;background:var(--panel)}.card h2{margin-top:0}.card p{color:var(--muted)}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}.btn{display:inline-block;padding:12px 17px;border:1px solid var(--accent);border-radius:8px;text-decoration:none;font-weight:800}.btn.primary{background:var(--accent);color:#07111f}footer{padding:28px 0;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
   </style>
 </head>
-
-<body>
-
-  <header>
-    <h1>Log Analysis Lab</h1>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/alert-triage">Alert Triage</a>
-      <a href="/threat-hunting">Threat Hunting</a>
-    </nav>
-  </header>
-
-  <section>
-    <h2>Overview</h2>
-    <div class="card">
-      <p>This lab focuses on analyzing security logs to identify suspicious activity, correlate events, and determine whether an incident requires escalation.</p>
-      <p>Tools used: SIEM (Splunk / ELK), Sysmon, Windows Event Logs, Linux auth logs.</p>
-    </div>
-
-    <h2>Scenario</h2>
-    <div class="card">
-      <p>A workstation triggered multiple failed login attempts followed by a successful login from an unusual IP address. Your task is to investigate the logs and determine whether this is brute-force activity or legitimate user behavior.</p>
-    </div>
-
-    <h2>Investigation Steps</h2>
-    <div class="card">
-      <ul>
-        <li>Reviewed Windows Event ID 4625 (failed logon attempts).</li>
-        <li>Correlated timestamps with Event ID 4624 (successful logon).</li>
-        <li>Checked source IP and geolocation for anomalies.</li>
-        <li>Analyzed Sysmon Event ID 3 (network connections) for unusual outbound traffic.</li>
-        <li>Reviewed user activity logs for privilege escalation attempts.</li>
-      </ul>
-    </div>
-
-    <h2>Findings</h2>
-    <div class="card">
-      <p>The pattern of repeated failed logins followed by a successful login from a foreign IP suggests a possible brute-force attack. No privilege escalation was detected, but lateral movement attempts were observed.</p>
-    </div>
-
-    <h2>Conclusion</h2>
-    <div class="card">
-      <p>This activity should be escalated to Tier 2 for deeper investigation. Recommended actions include resetting the user’s password, blocking the suspicious IP, and reviewing additional logs for lateral movement.</p>
-    </div>
-  </section>
-
-  <footer>
-    <p>© 2026 Ravicyberops | <a href="https://github.com/RJCYBER01/soc-labs">GitHub</a></p>
-  </footer>
-
-</body>
+<body><header><nav class="wrap"><a href="/">Ravi Cyber Ops</a><a class="back" href="/">← Portfolio</a></nav></header><main class="wrap"><div class="eyebrow">SOC investigations</div><h1>Windows security log analysis</h1><p class="lead">A growing collection of evidence-led investigations using Windows Event Logs and Sysmon telemetry.</p><article class="card"><h2>Windows Intrusion Investigation</h2><p>Reconstructing a brute-force RDP compromise, backdoor account creation, privilege escalation, malware delivery, persistence, and command-and-control activity.</p><div class="actions"><a class="btn primary" href="/log-analysis/windows-logging-for-soc/">Read case study</a><a class="btn" href="/log-analysis/windows-logging-for-soc/report.pdf">Open full report</a></div></article></main><footer><div class="wrap">© 2026 Ravi Puri · <a href="https://github.com/RJCYBER01/soc-labs">Source on GitHub</a></div></footer></body>
 </html>
