@@ -59,4 +59,4 @@ All analysis was performed manually in Windows Event Viewer using event filterin
 
 ---
 
-*Full task-by-task writeup with screenshots available in [`/report`](./report).*
+📄 **[View the full investigation report with screenshots (PDF)](./report.pdf)**
