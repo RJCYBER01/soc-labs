@@ -1,6 +1,16 @@
-# Ravi Cyber Ops
+# Ravi Puri — Cybersecurity Portfolio
 
-The source repository for [ravicyberops.com](https://ravicyberops.com), Ravi Puri's cybersecurity portfolio and SOC investigation lab.
+The source repository for [ravicyberops.com](https://ravicyberops.com), Ravi Puri's minimalist cybersecurity portfolio and SOC investigation lab.
+
+## Portfolio pages
+
+- Home
+- About
+- Certifications
+- Skills
+- Projects
+- Learning Journey
+- Contact
 
 ## Published investigation
 
