@@ -1,46 +1,79 @@
-# Ravi Puri — Cybersecurity Portfolio
+# Ravi CyberOps — Cybersecurity Portfolio
 
-The source repository for [ravicyberops.com](https://ravicyberops.com), Ravi Puri's minimalist cybersecurity portfolio and SOC investigation lab.
+This repository contains the source files and technical documentation for [ravicyberops.com](https://ravicyberops.com).
 
-## Portfolio pages
+Every published project represents hands-on work completed in an authorized learning environment. The portfolio is intentionally evidence-based: tools, skills, screenshots, and reports are included only when they reflect work actually completed.
 
-- Home
-- About
-- Certifications
-- Skills
-- Projects
-- Learning Journey
-- Contact
+---
 
-## Published investigation
+## Completed Projects
 
-### Windows Intrusion Investigation
+| Project | Focus | Documentation | Live Page |
+|---|---|---|---|
+| Building My Cybersecurity Home Lab | VPN connectivity, scanning, packet-analysis setup, PowerShell | [README](./projects/home-lab/) | [View page](https://ravicyberops.com/projects/home-lab/) |
+| Hack The Box — Meow | Reconnaissance, Nmap, Telnet enumeration | [README](./projects/htb-meow/) | [View page](https://ravicyberops.com/projects/htb-meow/) |
+| Hack The Box — Fawn | FTP enumeration, anonymous access, file retrieval | [README](./projects/htb-fawn/) | [View page](https://ravicyberops.com/projects/htb-fawn/) |
+| Windows Intrusion Investigation | Windows event-log analysis, Sysmon, incident reconstruction | [README](./log-analysis/windows-logging-for-soc/) | [View case study](https://ravicyberops.com/log-analysis/windows-logging-for-soc/) |
 
-An evidence-led reconstruction of a Windows compromise covering:
+---
 
-- Brute-force RDP activity and successful remote access
-- Attacker-session correlation using Logon IDs
-- Backdoor account creation and group-membership changes
-- Malware delivery and Startup-folder persistence
-- Command-and-control traffic identified through Sysmon
+## Tools Used in Published Work
 
-**Tools used:** Windows Event Viewer, Windows Security Event Logs, and Sysmon.
+- Windows 11
+- Windows PowerShell
+- OpenVPN
+- Nmap
+- Wireshark
+- Windows Event Viewer
+- Windows Security Event Logs
+- Sysmon
 
-- [Read the web case study](https://ravicyberops.com/log-analysis/windows-logging-for-soc/)
-- [View the investigation files](./log-analysis/windows-logging-for-soc/)
+---
 
-## Portfolio focus
+## Project Documentation Standard
 
-- SOC operations and alert triage
-- Windows security and event correlation
-- Threat detection and incident investigation
-- Azure security
-- Python and PowerShell security automation
+Each project is designed to answer six practical questions:
 
-## Deployment
+1. What was the objective?
+2. What environment was used?
+3. Which tools were actually used?
+4. What methodology was followed?
+5. What was the outcome?
+6. What was learned?
 
-The `main` branch deploys through Vercel to `ravicyberops.com`. The `www` hostname permanently redirects to the apex domain.
+Project folders use a consistent structure where the supporting material exists:
 
-## Responsible-use statement
+```text
+project-name/
+├── README.md      # GitHub technical documentation
+├── index.html     # Live portfolio presentation
+├── report.pdf     # Detailed report when available
+└── images/        # Original screenshots and evidence
+```
 
-All investigations documented here were completed in authorized training environments. Findings are shared for defensive education and professional portfolio purposes.
+A reusable documentation template is available in [`templates/project-documentation`](./templates/project-documentation/).
+
+---
+
+## Repository Map
+
+```text
+soc-labs/
+├── projects/
+│   ├── home-lab/
+│   ├── htb-meow/
+│   └── htb-fawn/
+├── log-analysis/
+│   └── windows-logging-for-soc/
+├── templates/
+│   └── project-documentation/
+└── index.html
+```
+
+The current paths are being kept stable so existing portfolio links continue to work. Future projects will follow the same documentation standard without claiming unfinished work.
+
+---
+
+## Responsible Use
+
+All labs and investigations documented here were completed in authorized training environments. The material is shared for defensive education, skill development, and professional portfolio purposes.
