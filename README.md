@@ -1,57 +1,69 @@
 # Ravi CyberOps — Cybersecurity Portfolio
 
-This repository contains the source files and technical documentation for [ravicyberops.com](https://ravicyberops.com).
+Hands-on cybersecurity portfolio focused on **enterprise security foundations, identity and access management, endpoint visibility, security monitoring, and cloud-security progression**.
 
-Every published project represents hands-on work completed in an authorized learning environment. The portfolio is intentionally evidence-based: tools, skills, screenshots, and reports are included only when they reflect work actually completed.
-
----
-
-## Completed Projects
-
-| Project | Focus | Documentation | Live Page |
-|---|---|---|---|
-| Building My Cybersecurity Home Lab | VPN connectivity, scanning, packet-analysis setup, PowerShell | [README](./projects/home-lab/) | [View page](https://ravicyberops.com/projects/home-lab/) |
-| Hack The Box — Meow | Reconnaissance, Nmap, Telnet enumeration | [README](./projects/htb-meow/) | [View page](https://ravicyberops.com/projects/htb-meow/) |
-| Hack The Box — Fawn | FTP enumeration, anonymous access, file retrieval | [README](./projects/htb-fawn/) | [View page](https://ravicyberops.com/projects/htb-fawn/) |
-| Windows Intrusion Investigation | Windows event-log analysis, Sysmon, incident reconstruction | [README](./log-analysis/windows-logging-for-soc/) | [View case study](https://ravicyberops.com/log-analysis/windows-logging-for-soc/) |
+Every published project is evidence-based. Technologies, screenshots, findings, and security claims are included only when they reflect work actually completed in an authorized lab or training environment.
 
 ---
 
-## Tools Used in Published Work
+## Flagship Project — ABC Enterprise
 
-- Windows 11
-- Windows PowerShell
-- OpenVPN
-- Nmap
-- Wireshark
-- Windows Event Viewer
-- Windows Security Event Logs
-- Sysmon
+**ABC Enterprise** is an isolated enterprise-style cybersecurity home lab built to connect Windows infrastructure, Active Directory, IAM concepts, endpoint telemetry, hardening, monitoring, and security validation into one evolving environment.
+
+### Current documented capabilities
+
+- Windows Server domain controller with AD DS and DNS
+- Department OUs, security groups, and delegated directory permissions
+- Windows 11 domain membership
+- Group Policy security hardening and resultant-policy validation
+- Sysmon endpoint telemetry
+- Windows authentication event analysis
+- Wazuh agents, security-event visibility, and SCA measurement
+- Nmap service-exposure validation inside the isolated lab
+
+**[View the ABC Enterprise technical documentation](./ABC%20Enterprise/)**
+
+The project will expand toward networking, IAM, cloud security, detection engineering, and later AI-security controls. Future capabilities are not presented as completed until implementation is verified.
 
 ---
 
-## Project Documentation Standard
+## Additional Completed Labs
 
-Each project is designed to answer six practical questions:
+| Project | Focus | Documentation |
+|---|---|---|
+| Windows Intrusion Investigation | Windows event-log analysis, Sysmon, incident reconstruction | [Case study](./log-analysis/windows-logging-for-soc/) |
+| Building My Cybersecurity Home Lab | VPN connectivity, scanning, packet-analysis setup, PowerShell | [Documentation](./projects/home-lab/) |
+| Hack The Box — Meow | Reconnaissance, Nmap, Telnet enumeration | [Documentation](./projects/htb-meow/) |
+| Hack The Box — Fawn | FTP enumeration, anonymous access, file retrieval | [Documentation](./projects/htb-fawn/) |
+
+These smaller labs support specific foundational skills. ABC Enterprise is the primary integrated portfolio project.
+
+---
+
+## Skills Demonstrated in Published Work
+
+**Enterprise / Identity** — Windows Server, Active Directory, Group Policy, DNS, security groups, delegated permissions, domain-joined endpoints
+
+**Endpoint / Detection** — Windows Security Event Logs, Sysmon, Wazuh, Security Configuration Assessment
+
+**Networking / Validation** — TCP/IP fundamentals, Nmap, Wireshark, service exposure analysis
+
+**Security Practice** — system hardening, authentication-event analysis, evidence validation, defensive documentation
+
+---
+
+## Documentation Standard
+
+Projects are written to answer six practical questions:
 
 1. What was the objective?
 2. What environment was used?
-3. Which tools were actually used?
+3. Which technologies were actually implemented?
 4. What methodology was followed?
-5. What was the outcome?
-6. What was learned?
+5. What evidence supports the result?
+6. What was learned or should be improved next?
 
-Project folders use a consistent structure where the supporting material exists:
-
-```text
-project-name/
-├── README.md      # GitHub technical documentation
-├── index.html     # Live portfolio presentation
-├── report.pdf     # Detailed report when available
-└── images/        # Original screenshots and evidence
-```
-
-A reusable documentation template is available in [`templates/project-documentation`](./templates/project-documentation/).
+Screenshots intended for public portfolio use are reviewed before publication. Credentials, authentication secrets, recovery codes, personal identifiers, unnecessary network identifiers, and other sensitive information are excluded or sanitized.
 
 ---
 
@@ -59,21 +71,22 @@ A reusable documentation template is available in [`templates/project-documentat
 
 ```text
 soc-labs/
+├── ABC Enterprise/          # Flagship enterprise cybersecurity lab
+│   ├── README.md
+│   └── docs/screenshots/    # Sanitized evidence set (being prepared)
 ├── projects/
 │   ├── home-lab/
 │   ├── htb-meow/
 │   └── htb-fawn/
 ├── log-analysis/
 │   └── windows-logging-for-soc/
-├── templates/
-│   └── project-documentation/
 └── index.html
 ```
 
-The current paths are being kept stable so existing portfolio links continue to work. Future projects will follow the same documentation standard without claiming unfinished work.
+Existing project paths are being preserved during the portfolio rebuild so material can be reviewed before any consolidation or retirement.
 
 ---
 
 ## Responsible Use
 
-All labs and investigations documented here were completed in authorized training environments. The material is shared for defensive education, skill development, and professional portfolio purposes.
+All labs and investigations documented in this repository were completed in authorized learning environments. The material is published for defensive cybersecurity education, skill development, and professional portfolio purposes.
